@@ -6,7 +6,7 @@ class Header extends Component {
       <div>
           <nav>
             <div className="nav-wrapper ligth-blue darken-2">
-              <a className="brand-logo">{this.props.titulo}</a>
+              <p className="brand-logo">{this.props.titulo}</p>
             </div>
           </nav>
       </div>

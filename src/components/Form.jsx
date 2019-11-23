@@ -32,7 +32,6 @@ class Form extends Component {
                   <option value="" defaultValue>
                     Selecciona un Pais
                   </option>
-                  <label htmlFor="pais">Pais: </label>
                   <option value="AR">Argentina</option>
                   <option value="CO">Colombia</option>
                   <option value="CR">Costa Rica</option>
@@ -41,12 +40,13 @@ class Form extends Component {
                   <option value="MX">Mexico</option>
                   <option value="PE">Peru</option>
                 </select>
+                  <label htmlFor="pais">Pais: </label>
               </div>
               <div className="input-field col s12 m8 l4 offset-2">
                 <input
                   type="submit"
                   value="Buscar"
-                  className="wave-efect wave-ligth btn-large yellow accent-4"
+                  className="btn-large yellow accent-4"
                 />
               </div>
             </form>

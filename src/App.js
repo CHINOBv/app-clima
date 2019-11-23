@@ -1,14 +1,27 @@
 import React,{ Component } from 'react';
 import Header from './components/Header.jsx';
-import Form from './components/Form.jsx'
+import Form from './components/Form.jsx';
+import Error from './components/Error.jsx'
 
 class App extends Component {
-  state = {  }
+  state = { 
+    Error:false
+   }
   DataCons=respuesta=>{
-    console.log(respuesta);
+    if(respuesta.Ciudad==='' || respuesta.Pais ===''){
+      this.setState({
+        Error:true
+      })
+    }else{
+      console.log(respuesta)
+    }
     
   }
   render() { 
+    const error = this.state.Error
+    if(error === true){
+      <Error/>
+    }
     return ( <div className="app">
     <Header
     titulo={"Clima"}
