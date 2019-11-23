@@ -12,8 +12,9 @@ class App extends Component {
   };
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevState.respuesta != this.state.respuesta) {
+    if (prevState.respuesta !== this.state.respuesta) {
       this.APICon();
+      
     }
   }
 
@@ -66,7 +67,9 @@ class App extends Component {
     if (error === true) {
       resultado = <Error />;
     } else {
-      resultado = <Clima resultado={this.state.resultado} />;
+      resultado = <Clima 
+      resultado={this.state.resultado} 
+      />;
     }
     return (
       <div className="app">
